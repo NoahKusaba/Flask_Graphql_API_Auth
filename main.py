@@ -25,7 +25,8 @@ def graphql_view():
 # Generates token that will timeout after 60 seconds.
 """
 - Real implementation would require login headers for token generation
-- Also would store as a {token : initial_time} dictionary in a set() variable, would clear old tokens. 
+- Also would store as a {token : initial_time} dictionary for differnt users, and would clear old tokens when necessary.
+    - Not impelented for testing purposes (only 1 user ). 
 """
 @app.route('/token')
 def generate_token():
